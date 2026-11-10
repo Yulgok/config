@@ -1,0 +1,13 @@
+[Unit]
+Description=OpenCanary Daemon
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/username
+ExecStart=/home/username/env/bin/opencanaryd --start
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
